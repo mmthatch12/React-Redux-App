@@ -16,8 +16,10 @@ const PlayerList = props => {
                 )}
                 
             </button>
+            <div className='list'>
             {props.players && 
                 props.players.map(player => <Player key={player.id} player={player} />)}
+            </div>
         </>
     )
 }
@@ -27,7 +29,6 @@ const mapStateToProps = state => {
 
         players: state.players,
         isLoading: state.isLoading,
-        isSeeStats: state.isSeeStats
     }
 }
 

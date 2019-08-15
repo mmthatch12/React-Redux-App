@@ -2,15 +2,12 @@ import {
     GET_PLAYER_DATA_START,
     GET_PLAYER_DATA_SUCCESS,
     GET_PLAYER_DATA_FAILURE,
-    TOGGLE_STATS
 } from '../actions'
 
 const initialState = {
     players: [],
-    test: 'This should be working!',
     isLoading: false,
-    error: '',
-    isSeeStats: false,
+    error: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -26,12 +23,6 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isLoading: false,
                 players: action.payload,
-                error: ''
-            }
-        case TOGGLE_STATS:
-            return {
-                ...state,
-                isSeeStats: !isSeeStats,
                 error: ''
             }
         default:
