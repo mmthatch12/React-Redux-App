@@ -8,7 +8,8 @@ const initialState = {
     players: [],
     test: 'This should be working!',
     isLoading: false,
-    error: ''
+    error: '',
+    isSeeStats: false,
 }
 
 export const reducer = (state = initialState, action) => {

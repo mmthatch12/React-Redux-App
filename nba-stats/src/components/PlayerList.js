@@ -26,7 +26,8 @@ const mapStateToProps = state => {
     return {
 
         players: state.players,
-        isLoading: state.isLoading
+        isLoading: state.isLoading,
+        isSeeStats: state.isSeeStats
     }
 }
 
