@@ -24,7 +24,7 @@ const PlayerList = props => {
 
 const mapStateToProps = state => {
     return {
-        test: state.test,
+
         players: state.players,
         isLoading: state.isLoading
     }
