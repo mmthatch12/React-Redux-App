@@ -8,11 +8,12 @@ const PlayerList = props => {
     return (
         <>
             <h1>NBA Player Stats!</h1>
-            <button >
+            <button onClick={props.getInfo}>
+                {props.isLoading }
                 Get Player Info
             </button>
             {props.players && 
-                props.players.map(player => <Player key={player.name} player={player} />)}
+                props.players.map(player => <Player key={player.id} player={player} />)}
         </>
     )
 }
@@ -20,8 +21,9 @@ const PlayerList = props => {
 const mapStateToProps = state => {
     return {
         test: state.test,
-        players: state.players
+        players: state.players,
+        isLoading: state.isLoading
     }
 }
 
-export default connect(mapStateToProps, { getInfo (PlayerList)
+export default connect(mapStateToProps, { getInfo })(PlayerList)
