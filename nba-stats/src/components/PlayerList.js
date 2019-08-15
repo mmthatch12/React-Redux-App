@@ -2,6 +2,7 @@ import React from 'react'
 import Player from './Player'
 import { connect } from 'react-redux'
 import Loader from 'react-loader-spinner'
+import { getInfo } from '../actions'
 
 const PlayerList = props => {
     return (
@@ -23,4 +24,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {})(PlayerList)
+export default connect(mapStateToProps, { getInfo (PlayerList)
