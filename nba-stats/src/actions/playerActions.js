@@ -9,7 +9,10 @@ export const getInfo = () => {
         dispatch({ type: GET_PLAYER_DATA_START });
         axios
             .get(`https://www.balldontlie.io/api/v1/players`)
-            .then(res => console.log("res", res.data.data))
+            .then(res => {
+                console.log("res", res.data.data)
+                dispatch({ type: GET_PLAYER_DATA_SUCCESS, payload: res.data.data })
+            })
             .catch(err => {
                 dispatch({ type: GET_PLAYER_DATA_FAILURE, payload: err.response })
             })
