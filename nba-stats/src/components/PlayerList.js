@@ -9,8 +9,12 @@ const PlayerList = props => {
         <>
             <h1>NBA Player Stats!</h1>
             <button onClick={props.getInfo}>
-                {props.isLoading }
-                Get Player Info
+                {props.isLoading ? (
+                    <Loader type="ThreeDots" color="#somecolor" height={50} width={50} />
+                ) : (
+                    'Get Player Info'
+                )}
+                
             </button>
             {props.players && 
                 props.players.map(player => <Player key={player.id} player={player} />)}
