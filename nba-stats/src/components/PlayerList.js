@@ -1,8 +1,9 @@
 import React from 'react'
+import Player from './Player'
 
 const PlayerList = () => {
     return (
-        <h1>From PlayerList</h1>
+        <Player />
     )
 }
 
