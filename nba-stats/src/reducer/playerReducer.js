@@ -1,7 +1,8 @@
 const initialState = {
     players: [],
     test: 'This should be working!',
-    othertest: 'this is a second test'
+    isLoading: false,
+    error: ''
 }
 
 export const reducer = (state = initialState, action) => {

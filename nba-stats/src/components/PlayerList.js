@@ -6,9 +6,9 @@ import Loader from 'react-loader-spinner'
 const PlayerList = props => {
     return (
         <>
-            <Player test={props.test} players={props.players} />
+            <h1>NBA Player Stats!</h1>
             <button >
-
+                Get Player Info
             </button>
             {props.players && 
                 props.players.map(player => <Player key={player.name} player={player} />)}
