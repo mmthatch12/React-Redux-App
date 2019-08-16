@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.player {
+  border: 3px solid blue;
+  width: 30%;
+  margin: 10px;
+}
+
+
+
